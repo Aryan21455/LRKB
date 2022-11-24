@@ -8,12 +8,12 @@
 
 int main() {
     float Qwe1[2][2] = {{1.0,2.0},{3.0,4.0}};
-    float abc2[2][2] = {{0.0,0.0,0.0},{0.0,0.0,0.0}};
+    float abc2[2][2] = {{0.0,0.0},{0.0,0.0}};
     int Column=2;
     int Ro=2;
     int i=0;
     int j=0;
-    printf("These are the initial matices");
+    printf("These are the initial matices\n");
     while(i<Column){
         while(j<Ro){
             printf("%lf ",Qwe1[i][j]);
@@ -58,7 +58,7 @@ int main() {
         exit(1);
     }
     else{
-        printf("These are the final matices");
+        printf("These are the final matices\n");
         while(i<Column){
         while(j<Ro){
             printf("%lf ",Qwe1[i][j]);
