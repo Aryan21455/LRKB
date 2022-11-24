@@ -9,14 +9,15 @@
 int main() {
     int Column=2;
     int Ro=2;
-    int i=0;
-    int j=0;
+    
     float Qwe1[2][2] = {{1.0,2.0},{3.0,4.0}};
     float abc2[2][2] = {{0.0,0.0},{0.0,0.0}};
     
     printf("These are the initial matices\n");
-    while(i<Ro){
-        while(j<Column){
+    int i=0;
+    while(i<2){
+        int j=0;
+        while(j<2){
             printf("%lf ",Qwe1[i][j]);
             j++;
         }
@@ -24,8 +25,10 @@ int main() {
         i++;
     }
     printf("\n");
-    while(i<Ro){
-        while(j<Column){
+    i=0;
+    while(i<2){
+        int j=0;
+        while(j<2){
             printf("%lf ",abc2[i][j]);
             j++;
         }
@@ -33,25 +36,6 @@ int main() {
         i++;
     }
     printf("\n");
-
-    // for (int i = 0; i < 4; i++){
-    //     for (int j = 0; j < 3; j++){
-    //         printf("%lf ", MAT1[i][j]);
-    //         }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
-    // printf("This is the initial matrix2 is:\n");
-
-    // for (int i = 0; i < 4; i++){
-    //     for (int j = 0; j < 3; j++){
-    //         printf("%lf ", MAT2[i][j]);
-    //         }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
     int res = syscall(SYS_kernel_2d_memcpy,Qwe1,abc2,Column,Ro);
 
     if(res < 0){
@@ -59,47 +43,28 @@ int main() {
         exit(1);
     }
     else{
-        printf("These are the final matices");
-        while(i<Ro){
-        while(j<Column){
+        printf("These are the initial matices\n");
+    int i=0;
+    while(i<2){
+        int j=0;
+        while(j<2){
             printf("%lf ",Qwe1[i][j]);
             j++;
         }
         printf("\n");
         i++;
-        }
-        printf("\n");
-        while(i<Ro){
-            while(j<Column){
-                printf("%lf ",abc2[i][j]);
-                j++;
-            }
-            printf("\n");
-            i++;
-        }
-        printf("\n");
-
     }
-
-    // printf("This is the final matrix1 is:\n");
-
-    // for (int i = 0; i < 4; i++){
-    //     for (int j = 0; j < 3; j++){
-    //         printf("%lf ", MAT1[i][j]);
-    //         }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
-    // printf("This is the final matrix2 is:\n");
-
-    // for (int i = 0; i < 4; i++){
-    //     for (int j = 0; j < 3; j++){
-    //         printf("%lf ", MAT2[i][j]);
-    //         }
-    //     printf("\n");
-    // }
-    // printf("\n");
-
+    printf("\n");
+    i=0;
+    while(i<2){
+        int j=0;
+        while(j<2){
+            printf("%lf ",abc2[i][j]);
+            j++;
+        }
+        printf("\n");
+        i++;
+    }
+    printf("\n");
     return 0;
 }
