@@ -36,7 +36,7 @@ int main() {
         i++;
     }
     printf("\n");
-    int res = syscall(SYS_kernel_2d_memcpy,Qwe1,abc2,Column,Ro);
+    int res = syscall(SYS_kernel_2d_memcpy,abc2,Qwe1,Ro,Column);
 
     if(res < 0){
         printf("ERROR!");
